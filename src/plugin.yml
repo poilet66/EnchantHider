@@ -1,0 +1,9 @@
+main: me.poilet66.enchanthider.EnchantHider
+name: EnchantHider
+version: 1.0
+description: Hide specific enchants from enchant tables
+api-version: 1.16
+commands:
+  enchanthider:
+    description: Base command for managing enchantments.
+    usage: /enchanthider [add/remove/list]
