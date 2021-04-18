@@ -5,4 +5,5 @@ Enchants can either be hidden in game using /enchanthider or via the config.yml 
 
 <h2>Permission Nodes
   
+
 enchanthider.config - gives permission to use /enchanthider [add/remove/list], allowing player to manage hidden enchants from in game.
