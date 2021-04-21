@@ -10,10 +10,12 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class EnchantHider extends JavaPlugin {
 
     public static final String ENCHANT_KEY_LIST_URL = "https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/enchantments/Enchantment.html";
+    private PlayerHandler PH;
 
     @Override
     public void onEnable() {
         saveDefaultConfig();
+        this.PH = new PlayerHandler(this);
         getServer().getPluginManager().registerEvents(new EnchantListener(this), this);
         getCommand("enchanthider").setExecutor(new EnchantCommand(this));
         getCommand("enchanthider").setTabCompleter(new CommandTabCompleter());
@@ -31,5 +33,9 @@ public class EnchantHider extends JavaPlugin {
             return false;
         }
         return true;
+    }
+
+    public PlayerHandler getPH() {
+        return this.PH;
     }
 }
